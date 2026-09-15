@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pandas-data-processor"
+version = "0.1.0"
+description = "Validated CSV/XLSX cleaning and transformation CLI with source traceability."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "pandas>=3.0.0,<3.1",
+  "openpyxl>=3.1.5,<4",
+  "xlsxwriter>=3.2.0,<4",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10", "PyYAML>=6,<7"]
+
+[project.scripts]
+pandas-processor = "pandas_processor.entry:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["pandas_processor*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

@@ -1,0 +1,11 @@
+{
+  "required_columns": {
+    "employee_id": {"dtype": "string", "nullable": false, "pattern": "[0-9]{6}"},
+    "date": {"dtype": "datetime", "nullable": false, "format": "%Y-%m-%d"},
+    "amount": {"dtype": "number", "nullable": false, "min": 0},
+    "department": {"dtype": "string", "nullable": false}
+  },
+  "optional_columns": {"note": {"dtype": "string", "nullable": true}},
+  "unique_key": ["employee_id"],
+  "allow_extra_columns": false
+}

@@ -1,0 +1,10 @@
+{
+  "row_count": 2,
+  "required_columns": ["employee_id", "date", "amount", "department"],
+  "duplicate_keys": ["employee_id"],
+  "duplicate_count": 0,
+  "null_counts": {"employee_id": 0, "amount": 0},
+  "unique_ids": {"employee_id": ["001234", "001235"]},
+  "totals": {"amount": {"value": "30.00", "atol": "0", "rtol": "0"}},
+  "exception_count": 0
+}

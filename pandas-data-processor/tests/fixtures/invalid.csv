@@ -1,0 +1,4 @@
+employee_id,date,amount,department
+001234,2026-09-01,10.25,Sales
+001234,not-a-date,oops,Sales
+001236,2026-09-03,,Support
